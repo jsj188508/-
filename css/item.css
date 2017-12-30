@@ -1,0 +1,85 @@
+*{outline:none;}
+header nav{width:100%;height:120px;position:relative;}
+nav>span.logo{
+	padding:40px 105px;
+	position:absolute;
+    top: 20px;
+    left: 5%;
+	background:url(../images/logo.png)no-repeat center center;}
+nav .search{display:inline-block !important;
+	position:absolute;right:25%;top:32.5px;
+	width: 40%;
+	border:2px solid #e3493c;}
+nav #search{
+	width:100%;height:50px;
+	box-sizing:border-box;
+	padding:5px 10px;background:none;border:none;font-size:18px;color:#fff;}
+nav #search::-webkit-input-placeholder{color:#fff;}
+    #search::-moz-input-placeholder{color:#fff;}
+    #search::-0-input-placeholder{color:#fff;}
+    #search::input-placeholder{color:#fff;}
+nav #search_btn{position:absolute;top:0;right:0;
+	border:none;
+	background:url(../images/search.png)no-repeat center center #e3493c;
+	width:60px;height:100%;}
+
+div.main{width:75%;margin:0 auto;border:1px solid #ccc;display:table;}
+div.main>div.pic{width:418px;float:left;position:relative;}
+
+div.main>div.pic>div.img{width:402px;height:402px;
+	border:1px solid #ccc;position:relative;overflow:hidden;}
+div.main>div.pic>div.img span{width:150px;height:150px;
+	display:inline-block;border:1px solid #ccc;
+	background: rgba(255,255,255,0.3);
+	position:absolute;top:0;left:0;opacity:0;}	
+div.main>div.pic>div.img:hover{border-color:#00f;}
+div.main>div.pic img{width:100%;height:100%;}
+p.bg_img{width:402px;height:402px;z-index:-1;
+	position:absolute;left:412px;top:0;overflow:hidden;}
+div.main>div.pic>ul{width:402px;margin-top:20px;}
+div.main>div.pic>ul>li{width:94px;height:94px;margin-left:6px;}
+div.main>div.pic>ul>li:first-child{margin-left:0;}
+
+div.main>div.information{width:50%;float:left;margin-left:20px;}
+div.main>div.information b{display:inline-block;margin:20px 0;}
+div.main>div.information p{line-height:48px;}
+div.main>div.information>div{background: #ccc;padding:0 20px;margin:10px 0;}
+div.main>div.information>b{border:1px solid #e3493c;border-radius:5px;}
+div.main>div.information>b>a{border-radius:5px;padding: 13px 30px;display:inline-block;}
+div.main>div.information>b>.add_gwc{background: #e3493c;border-radius:5px;color: #fff;padding: 13px 30px;}
+#produc_html{clear:both;
+	display:none;
+}
+p.num b{width:30px;text-align:center;}
+#product_num{width:20px;text-align:center;}
+/*快递城市*/
+#freight{position:relative;display:inline-block;}
+#city_block,#county_block{display:none;}
+#city_block,#county_block{
+	width:285px;
+	position:absolute;
+	top:20px;left:62%;
+	border:1px solid #ccc;
+	background:#fff;
+	padding:10px;
+	text-align:justify;
+	box-shadow:0 0 0 rgba(0,0,0,0.3);}
+
+#city_block p{line-height:30px;position:relative;}
+
+#county_block{left:62%;left:none;}
+
+#city_block .province>span{position:relative;padding:0 2px;}
+#city_block .province b.cits{display:none;border-top:1px solid #ddd;margin:10px 0 5px;padding-top:5px;}
+.Arrow{position:absolute;top:0;left:30%;color:#ddd;}
+.cits u{display:inline-block;padding:0 2.5px;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+SET NAMES UTF8;
+DROP DATABASE IF EXISTS ajax;
+CREATE DATABASE ajax CHARSET=UTF8;
+USE ajax;
+CREATE TABLE yuangong(
+id INt PRIMARY KEY AUTO_INCREMENT,
+name varchar(64),
+age INT,
+phone varchar(64)
+);

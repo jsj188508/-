@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX</title>
+	<script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+	<form action="add_ajax.php">
+	<p>
+		<label for="name">员工名字:</label>
+		<input type="text" name="uname" id="name">
+	</p>
+	<p>
+		<label for="age">年　　龄:</label>
+		<input type="text" name="uage" id="age">
+	</p>
+	<p>
+		<label for="phone">phone:</label>
+		<input type="text" name="uphone" id="phone">
+	</p>
+		<input type="submit" value="提 交">
+	</form>
+	<p id="Cha_ru">插入员工信息</p>
+
+	<button id="btn">13</button>
+	<div id="ti_shi"></div>
+	
+	<script>
+		$('#btn').click(function(){
+			var name=$('[name="uname"]').val();
+			var phone=$('[name="uphone"]').val();
+			var age=$('[name="uage"]').val();
+
+			console.log(phone);
+			// $.post('add_ajax1.php',{"name":name,"phone":phone,"age":age},function(data){
+			// // 接受后端传过来的数据,并显示在指定的页面元素中
+			// 	$("#ti_shi").html(data);
+			// },);
+
+			// $.get('add_ajax1.php',{"name":name,"phone":phone,"age":age},function(data){
+			// // 接受后端传过来的数据,并显示在指定的页面元素中
+			// 	$("#ti_shi").html(data);
+			// 	$("#ti_s").html(data);
+			// 	console.log(data);
+			// });
+
+
+			$.ajax({
+				'type':'post',
+				"url":'add_ajax1.php',
+				'data':{"name":name,"phone":phone,"age":age},
+				'dataType':'html',
+				'succes':function(data){
+					$("#ti_shi").html(data);
+				}
+			});
+		});
+	</script>
+	<form action="#">
+		<input type="text" name='search' >
+		<input type="button" value="搜索" id="search">
+	</form>
+	<div id="ti_s"></div>
+	<script>
+		$('#search').click(function(){
+			var text=$('[name="search"]').val();
+			$.get('search.php',{"t":text},function(da){
+				$('#ti_s').html(da);
+			})
+		})
+	</script>	
+
+</body>
+</html>
